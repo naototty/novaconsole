@@ -43,11 +43,24 @@ console, and takes input from the serial console.
 
 You can install the package with `pip`:
 
-    pip install git+http://github.com/larsks/novaconsole.git
+    pip install git+http://github.com/naototty/novaconsole.git
 
 Or you can clone the repository by hand and run `setup.py`:
 
-    git clone http://github.com/larsks/novaconsole.git
+    git clone http://github.com/naototty/novaconsole.git
     cd novaconsole
     python setup.py install
+
+### virtual env wrapper install on CentOS 7.x
+
+    sudo yum install python-virtualenvwrapper python-virtualenv
+    
+    git clone http://github.com/naototty/novaconsole.git
+    
+    mkvirtualenv mycloud
+    
+    cd novaconsole
+    pip install -r requires.txt
+    python setup.py install
+
 
