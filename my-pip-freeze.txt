@@ -27,7 +27,6 @@ oslo.i18n==3.5.0
 oslo.serialization==2.4.0
 oslo.utils==3.8.0
 pbr==1.9.1
-pkg-resources==0.0.0
 pluggy==0.3.1
 positional==1.0.1
 prettytable==0.7.2
