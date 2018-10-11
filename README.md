@@ -4,6 +4,8 @@ OpenStack.  You can read more about that support here:
 
 - http://blog.oddbit.com/2014/12/22/accessing-the-serial-console-of-your-nova-servers/
 
+- github original repo: https://github.com/larsks/novaconsole
+
 ## Usage
 
 With valid OpenStack credentials (`OS_USERNAME`, `OS_PASSWORD`,
@@ -30,6 +32,7 @@ escape character with `-e`:
     WARNING:novaconsole.client:connected to: ws://127.0.0.1:6083/?token=3fd11349-cd64-4dac-bbe0-68c49e9e1dc9
     WARNING:novaconsole.client:type "@." to disconnect
 
+
 ## Server configuration
 
 For this to work, your server must be configured to support serial
@@ -38,6 +41,7 @@ images, which will include something like `console=tty0
 console=ttyS0,11500n81` on the kernel command line.  This provides
 console output on both the graphical (vnc) console and the serial
 console, and takes input from the serial console.
+
 
 ## Installation
 
@@ -51,16 +55,25 @@ Or you can clone the repository by hand and run `setup.py`:
     cd novaconsole
     python setup.py install
 
-### virtual env wrapper install on CentOS 7.x
 
-    sudo yum install python-virtualenvwrapper python-virtualenv
-    
-    git clone http://github.com/naototty/novaconsole.git
+## virtualenv wrapper installation on CentOS 7.x (@naototty)
+
+You can install the virtualenv environment with pip
+by root user:
+
+```
+    yum install python-virtualenvwrapper python-virtualenv
     
     mkvirtualenv mycloud
+```
+it was created "mycloud" virtualenv.
     
+Or you can clone the repository by hand and run `setup.py`:
+```
+    git clone http://github.com/naototty/novaconsole.git
     cd novaconsole
     pip install -r requires.txt
     python setup.py install
+```
 
 
