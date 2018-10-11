@@ -72,7 +72,6 @@ Or you can clone the repository by hand and run `setup.py`:
 ```
     git clone http://github.com/naototty/novaconsole.git
     cd novaconsole
-    pip install -r requires.txt
     python setup.py install
 ```
 
